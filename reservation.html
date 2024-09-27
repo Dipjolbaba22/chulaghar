@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chulaghar - Home</title>
+    <title>Chulaghar - Reservation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
     <header>
         <nav>
             <ul>
@@ -20,18 +19,23 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="slider">
-            <div class="slide active">
-                <img src="images/bangladeshi_food_1.jpg" alt="Bangladeshi Food">
-                <div class="overlay">
-                    <h1>Welcome to Chulaghar</h1>
-                    <p>Three friends, one dream: Serving the community with love</p>
-                    <a href="menu.html" class="btn btn-primary">Explore Menu</a>
-                </div>
-            </div>
-        </div>
+    <section class="reservation">
+        <h2>Book a Table</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit" class="btn">Reserve Now</button>
+        </form>
     </section>
 
     <footer>
