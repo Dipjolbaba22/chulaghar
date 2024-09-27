@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Google Maps API placeholder for future integration
-    const mapDiv = document.getElementById('map');
-    mapDiv.innerHTML = "<p>Google Map will appear here.</p>";
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    const showSlide = (index) => {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    };
+
+    document.querySelector('.next').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    });
+
+    showSlide(currentIndex);
 });
